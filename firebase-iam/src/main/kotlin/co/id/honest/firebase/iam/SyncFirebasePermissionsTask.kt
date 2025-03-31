@@ -12,8 +12,6 @@ import com.google.auth.oauth2.GoogleCredentials
 import java.io.File
 import java.io.FileInputStream
 import org.gradle.api.DefaultTask
-import org.gradle.api.tasks.Input
-import org.gradle.api.tasks.Optional
 import org.gradle.api.tasks.TaskAction
 
 open class SyncFirebasePermissionsTask : DefaultTask() {
