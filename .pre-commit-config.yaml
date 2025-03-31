@@ -26,10 +26,14 @@ repos:
       - id: commitizen
         name: Commit Zen
         stages: [ commit-msg ]
-  - repo: https://github.com/jggomez/pre-commit-android-kotlin
-    rev: v1.0.1 # Grab latest version from https://github.com/jggomez/pre-commit-android-kotlin/releases
+  - repo: local
     hooks:
-      - id: ktlint
+      - id: ktlint-format
+        name: Kotlin Linter Format
+        entry: ./gradlew ktlintFormat
+        language: system
+        files: \.(kt|kts)$
+        pass_filenames: false
         stages:
           - pre-commit
   - repo: https://github.com/gitguardian/ggshield
