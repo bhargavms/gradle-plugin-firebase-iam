@@ -17,7 +17,7 @@ gradlePlugin {
     plugins {
         create("firebaseUserIAMPlugin") {
             id = "dev.mogra.firebase.iam"
-            implementationClass = "dev.mogra.firebase.iam.FirebaseIAMPlugin"
+            implementationClass = "dev.mogra.firebase.iam.FirebaseIamPlugin"
             displayName = "Firebase User IAM Gradle Plugin"
             description = "Manages firebaser user access and permissions based on a simple " +
                 "configuration"
