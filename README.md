@@ -1,5 +1,7 @@
 # Firebase IAM Gradle Plugin
 
+[![Gradle Build](https://github.com/bhargavms/gradle-plugin-firebase-iam/actions/workflows/build.yaml/badge.svg)](https://github.com/bhargavms/gradle-plugin-firebase-iam/actions/workflows/build.yaml)
+
 A Gradle plugin for managing Firebase project IAM permissions, written in Kotlin.
 
 ## Features
