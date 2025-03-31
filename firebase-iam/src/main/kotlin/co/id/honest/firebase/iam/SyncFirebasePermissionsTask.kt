@@ -34,7 +34,10 @@ open class SyncFirebasePermissionsTask : DefaultTask() {
             // Get service account key path
             val keyPath = it.credentialFile ?: project.file("firebase-$projectId.json")
             if (!keyPath.exists()) {
-                throw IllegalStateException("Service account key not found at: $keyPath. Please create this file.")
+                throw IllegalStateException(
+                    "Service account key not found at: $keyPath." +
+                        " Please create this file."
+                )
             }
 
             // Initialize the resource manager
@@ -66,12 +69,18 @@ open class SyncFirebasePermissionsTask : DefaultTask() {
             .build()
     }
 
-    private fun getCurrentPolicy(resourceManager: CloudResourceManager, projectId: String): Policy {
+    private fun getCurrentPolicy(
+        resourceManager: CloudResourceManager,
+        projectId: String
+    ): Policy {
         val getRequest = resourceManager.projects().getIamPolicy(projectId, GetIamPolicyRequest())
         return getRequest.execute()
     }
 
-    private fun createUpdatedPolicy(currentPolicy: Policy, firebaseProject: FirebaseProject): Policy {
+    private fun createUpdatedPolicy(
+        currentPolicy: Policy,
+        firebaseProject: FirebaseProject
+    ): Policy {
         // Clone the current bindings to avoid modifying them directly
         val existingBindings = currentPolicy.bindings ?: listOf()
         val newBindings = mutableListOf<Binding>()
