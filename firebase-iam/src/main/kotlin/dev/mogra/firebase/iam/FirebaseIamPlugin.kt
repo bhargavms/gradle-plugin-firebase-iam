@@ -1,4 +1,4 @@
-package co.id.honest.firebase.iam
+package dev.mogra.firebase.iam
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
