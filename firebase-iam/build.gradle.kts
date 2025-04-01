@@ -16,7 +16,7 @@ gradlePlugin {
     vcsUrl.set("https://github.com/bhargavms/gradle-plugin-firebase-iam")
     plugins {
         create("firebaseUserIAMPlugin") {
-            id = "dev.mogra.firebase.iam"
+            id = "io.github.bhargavms.firebase-iam"
             implementationClass = "dev.mogra.firebase.iam.FirebaseIamPlugin"
             displayName = "Firebase User IAM Gradle Plugin"
             description = "Manages firebaser user access and permissions based on a simple " +
