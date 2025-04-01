@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.lint.jlleitschuh)
     id("com.gradle.plugin-publish") version "1.3.1"
 }
-group = "dev.mogra"
+group = "io.github.bhargavms"
 version = "1.0.0"
 configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
     version.set("0.43.2")
