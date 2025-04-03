@@ -25,7 +25,7 @@ Add the plugin to your build script:
 
 ```kotlin
 plugins {
-    id("com.firebase.iam") version "1.0.0"
+    id("io.github.bhargavms.firebase-iam") version "1.0.0"
 }
 ```
 
@@ -33,7 +33,7 @@ plugins {
 
 ```groovy
 plugins {
-    id 'com.firebase.iam' version '1.0.0'
+    id 'io.github.bhargavms.firebase-iam' version '1.0.0'
 }
 ```
 
